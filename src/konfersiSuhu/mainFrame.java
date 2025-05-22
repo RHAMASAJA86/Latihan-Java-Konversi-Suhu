@@ -146,7 +146,8 @@ public class mainFrame extends javax.swing.JFrame {
         });
         getContentPane().add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, -1, -1));
 
-        btnTutup.setText("TUTUP");
+        btnTutup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/konfersiSuhu/icons8-close-17.png"))); // NOI18N
+        btnTutup.setText("tutup");
         btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTutupActionPerformed(evt);

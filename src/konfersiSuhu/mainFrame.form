@@ -231,7 +231,10 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="btnTutup">
       <Properties>
-        <Property name="text" type="java.lang.String" value="TUTUP"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/konfersiSuhu/icons8-close-17.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="tutup"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTutupActionPerformed"/>
