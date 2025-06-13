@@ -211,9 +211,10 @@ public class mainFrame extends javax.swing.JFrame {
             OutPut = (suhuAsal - 273.15) * 9/5 + 32; 
             lbOutPut.setText(String.valueOf(OutPut));
         } else if ("Kelvin".equals(skalaAsal) && "Kelvin".equals(skalaTujuan)) {
-            OutPut = suhuAsal;     
+            OutPut = suhuAsal;
+            lbOutPut.setText(String.valueOf(OutPut));
         } 
-        lbOutPut.setText(String.valueOf(OutPut));  
+          
     } catch (Exception e) {
         
         lbOutPut.setText("Input tidak valid");
