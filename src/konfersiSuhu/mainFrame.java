@@ -186,24 +186,23 @@ public class mainFrame extends javax.swing.JFrame {
         skalaAsal = cSkalaAsal.getSelectedItem().toString();
         skalaTujuan = cSkalaTujuan.getSelectedItem().toString();
         
-        if ("Celcius".equals(skalaAsal) && "Celcius".equals(skalaTujuan)) {
-            OutPut = suhuAsal;          
-        }else if ("Fahrenheit".equals(skalaTujuan)) {
+        if (skalaAsal.equals(skalaTujuan)) {
+            // Kalau skala asal dan tujuan sama, hasil = suhuAsal
+            OutPut = suhuAsal;
+        } else if ("Celcius".equals(skalaAsal) && "Fahrenheit".equals(skalaTujuan)) {
             OutPut = (suhuAsal * 9 / 5) + 32;
-        }else if ("Kelvin".equals(skalaTujuan)){
+        } else if ("Celcius".equals(skalaAsal) && "Kelvin".equals(skalaTujuan)) {
             OutPut = suhuAsal + 273.15;
-        }else if ("Fahrenheit".equals (skalaAsal) && "Fahrenheit".equals (skalaTujuan)) {
-            OutPut = suhuAsal;
-        }else if ("Celcius".equals(skalaTujuan)) {
-            OutPut = (suhuAsal - 32)*5/9;
-        }else if ("Kelvin".equals(skalaTujuan)){
+        } else if ("Fahrenheit".equals(skalaAsal) && "Celcius".equals(skalaTujuan)) {
+            OutPut = (suhuAsal - 32) * 5 / 9;
+        } else if ("Fahrenheit".equals(skalaAsal) && "Kelvin".equals(skalaTujuan)) {
             OutPut = (suhuAsal - 32) * 5 / 9 + 273.15;
-        }else if("kelvin".equals(skalaAsal)&& "Kelvin".equals(skalaTujuan)) {
-            OutPut = suhuAsal;
-        }else if ("celcius".equals(skalaTujuan)){
+        } else if ("Kelvin".equals(skalaAsal) && "Celcius".equals(skalaTujuan)) {
             OutPut = suhuAsal - 273.15;
-        }else if ("Fahrenheit".equals(skalaTujuan)){
-            OutPut = (suhuAsal - 273.15) * 9 / 5 + 32;     
+        } else if ("Kelvin".equals(skalaAsal) && "Fahrenheit".equals(skalaTujuan)) {
+            OutPut = (suhuAsal - 273.15) * 9 / 5 + 32;
+        } else {
+            lbOutPut.setText("Input tidak valid");     
         } 
         lbOutPut.setText(String.valueOf(OutPut));  
     } catch (Exception e) {
